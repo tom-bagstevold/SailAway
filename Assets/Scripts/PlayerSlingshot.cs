@@ -35,12 +35,12 @@ public class PlayerSlingshot : MonoBehaviour
             myLine.SetPosition(1, pointer.position);
         }
 
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0) && isDragging == true)
         {
-            isDragging = false;
+            
             myLine.enabled = false;
             myRB.AddForce((transform.up * power) * mouseDist);
-
+            isDragging = false;
 
         }
         
