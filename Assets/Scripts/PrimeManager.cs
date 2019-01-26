@@ -20,8 +20,10 @@ public class PrimeManager : MonoBehaviour
     public bool isSailing;
 
     public float sailingTimer;
+    public float refuelingTimer;
     private float time;
     private float animationLength;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,7 @@ public class PrimeManager : MonoBehaviour
 
         isSailing = true;
         sailingTimer = 5f;
+        refuelingTimer = 2f;
 
         animationLength = 2f;
     }
@@ -55,9 +58,23 @@ public class PrimeManager : MonoBehaviour
             }
         }
 
-        if(!isSailing)
+        else if(!isSailing)
         {
-            time = 0f;
+            time += Time.deltaTime;
+
+            if(time >= refuelingTimer)
+            {
+                if(happinessScore > 0)
+                {
+                    AdjustHappiness(-2f);
+                }
+                if(fuelScore < 500)
+                {
+                    AdjustFuel(20f);
+                }
+                
+                time = 0f;
+            }
         }
         
     }
