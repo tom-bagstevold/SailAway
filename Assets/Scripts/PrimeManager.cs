@@ -47,7 +47,7 @@ public class PrimeManager : MonoBehaviour
         {
             time += Time.deltaTime;
 
-            if(time >= sailingTimer)
+            if(time >= sailingTimer && happinessScore < 70f)
             {
                 AdjustHappiness(5f);
                 time = 0f;

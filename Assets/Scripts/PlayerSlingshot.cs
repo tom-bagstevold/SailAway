@@ -27,25 +27,29 @@ public class PlayerSlingshot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0))
+        if(manager.isSailing)
         {
-            isDragging = true;
+            if (Input.GetMouseButton(0))
+            {
+                isDragging = true;
 
-            mouseDist = Vector2.Distance(transform.position, pointer.position);
+                mouseDist = Vector2.Distance(transform.position, pointer.position);
 
-            myLine.enabled = true;
-            myLine.SetPosition(0, butt.position);
-            myLine.SetPosition(1, pointer.position);
+                myLine.enabled = true;
+                myLine.SetPosition(0, butt.position);
+                myLine.SetPosition(1, pointer.position);
+            }
+
+            if (Input.GetMouseButtonUp(0) && isDragging == true)
+            {
+                manager.AdjustFuel(-mouseDist);
+                myLine.enabled = false;
+                myRB.AddForce((transform.up * power) * (mouseDist * 2));
+                isDragging = false;
+
+            }
         }
-
-        if(Input.GetMouseButtonUp(0) && isDragging == true)
-        {
-            manager.AdjustFuel(-mouseDist);
-            myLine.enabled = false;
-            myRB.AddForce((transform.up * power) * (mouseDist * 2));
-            isDragging = false;
-
-        }
+        
         
     }
 }
