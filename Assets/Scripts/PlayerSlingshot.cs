@@ -11,6 +11,7 @@ public class PlayerSlingshot : MonoBehaviour
     private float power;
     public float mouseDist;
     public PrimeManager manager;
+    public Transform butt;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class PlayerSlingshot : MonoBehaviour
             mouseDist = Vector2.Distance(transform.position, pointer.position);
 
             myLine.enabled = true;
-            myLine.SetPosition(0, transform.position);
+            myLine.SetPosition(0, butt.position);
             myLine.SetPosition(1, pointer.position);
         }
 
