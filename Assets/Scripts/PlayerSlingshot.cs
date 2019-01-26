@@ -10,6 +10,7 @@ public class PlayerSlingshot : MonoBehaviour
     public bool isDragging;
     private float power;
     public float mouseDist;
+    public PrimeManager manager;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class PlayerSlingshot : MonoBehaviour
         myLine = gameObject.GetComponent<LineRenderer>();
         myLine.enabled = false;
         myRB = gameObject.GetComponent<Rigidbody2D>();
+        manager = GameObject.Find("GameManager").GetComponent<PrimeManager>();
         
     }
 
@@ -37,9 +39,9 @@ public class PlayerSlingshot : MonoBehaviour
 
         if(Input.GetMouseButtonUp(0) && isDragging == true)
         {
-            
+            manager.AdjustFuel(-mouseDist);
             myLine.enabled = false;
-            myRB.AddForce((transform.up * power) * mouseDist);
+            myRB.AddForce((transform.up * power) * (mouseDist * 2));
             isDragging = false;
 
         }
