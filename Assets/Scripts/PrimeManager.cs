@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PrimeManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PrimeManager : MonoBehaviour
     public GameObject player;
     public Transform endTarget;
     public GameObject endScreen;
+    public GameObject restartPanel;
     public Slider happinessSlider;
     public Slider fuelSlider;
     public Slider homeSlider;
@@ -74,6 +76,18 @@ public class PrimeManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+
+        if(fuelScore <= 0)
+        {
+            isSailing = false;
+            restartPanel.SetActive(true);
+            player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene(0);
+            }
         }
 
 
