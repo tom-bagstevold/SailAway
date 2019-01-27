@@ -8,6 +8,7 @@ public class PrimeManager : MonoBehaviour
     [Header("References")]
     public GameObject player;
     public Transform endTarget;
+    public GameObject endScreen;
     public Slider happinessSlider;
     public Slider fuelSlider;
     public Slider homeSlider;
@@ -58,7 +59,7 @@ public class PrimeManager : MonoBehaviour
         refuelingTimer = 2f;
         homeTimer = 3f;
         homeLeaveTime =3f;
-        finalAreaTimer = 5f;
+        finalAreaTimer = 3f;
         
 
         animationLength = 2f;
@@ -153,7 +154,7 @@ public class PrimeManager : MonoBehaviour
             SetFuel(500f);
             colliderRight.SetActive(false);
             colliderTop.SetActive(false);
-            player.GetComponent<Rigidbody2D>().AddForce((transform.up * 20f));
+            player.GetComponent<Rigidbody2D>().AddForce((transform.up * 1f));
 
             time += Time.deltaTime;
 
@@ -167,8 +168,8 @@ public class PrimeManager : MonoBehaviour
             if(homeScore >= 60)
             {
                 isSailing = false;
-                
-                
+
+                endScreen.SetActive(true);
             }
 
         }

@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1584105598}
   endTarget: {fileID: 123683024}
+  endScreen: {fileID: 1068048038}
   happinessSlider: {fileID: 945631814}
   fuelSlider: {fileID: 673431911}
   homeSlider: {fileID: 2132976067}
