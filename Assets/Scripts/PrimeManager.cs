@@ -10,6 +10,7 @@ public class PrimeManager : MonoBehaviour
     public GameObject player;
     public Transform endTarget;
     public GameObject endScreen;
+    public GameObject pausePanel;
     public GameObject restartPanel;
     public Slider happinessSlider;
     public Slider fuelSlider;
@@ -75,7 +76,7 @@ public class PrimeManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            pausePanel.SetActive(true);
         }
 
         if(fuelScore <= 0)
@@ -239,5 +240,10 @@ public class PrimeManager : MonoBehaviour
     {
 
         popupHome.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
