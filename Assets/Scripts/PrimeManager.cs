@@ -9,6 +9,7 @@ public class PrimeManager : MonoBehaviour
     [Header("References")]
     public GameObject player;
     public Transform endTarget;
+    public GameObject front;
     public GameObject endScreen;
     public GameObject pausePanel;
     public GameObject restartPanel;
@@ -162,6 +163,7 @@ public class PrimeManager : MonoBehaviour
         {
             Debug.Log("Visited All Homes!");
             FinalArea.SetActive(true);
+            front.SetActive(true);
         }
 
         if(inFinalArea)
@@ -185,6 +187,10 @@ public class PrimeManager : MonoBehaviour
                 isSailing = false;
 
                 endScreen.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.Space))
+                {
+                    SceneManager.LoadScene(0);
+                }
             }
 
         }
