@@ -121,7 +121,7 @@ public class PrimeManager : MonoBehaviour
                 }
                 if(fuelScore < 500)
                 {
-                    AdjustFuel(20f);
+                    AdjustFuel(75f);
                 }
                 
                 time = 0f;

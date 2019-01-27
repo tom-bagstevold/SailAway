@@ -5,7 +5,7 @@ using UnityEngine;
 public class FinalArea : MonoBehaviour
 {
     public PrimeManager manager;
-
+    public GameObject front;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class FinalArea : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         manager.inFinalArea = true;
+        front.SetActive(false);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

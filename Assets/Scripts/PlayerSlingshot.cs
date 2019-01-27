@@ -42,7 +42,7 @@ public class PlayerSlingshot : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0) && isDragging == true)
             {
-                manager.AdjustFuel(-mouseDist);
+                manager.AdjustFuel(-mouseDist / 1.5f);
                 myLine.enabled = false;
                 myRB.AddForce((transform.up * power) * (mouseDist * 2));
                 isDragging = false;
