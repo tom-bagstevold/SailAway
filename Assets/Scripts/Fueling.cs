@@ -47,11 +47,13 @@ public class Fueling : MonoBehaviour
             collision.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
             isDocked = true;
             manager.isSailing = false;
+            manager.isFueling = true;
         }
         else if (Input.GetKeyDown(KeyCode.E) && isDocked)
         {
             manager.isSailing = true;
             isDocked = false;
+            manager.isFueling = false;
         }
     }
 }

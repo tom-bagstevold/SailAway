@@ -18,6 +18,7 @@ public class PrimeManager : MonoBehaviour
     public float homeScore;
 
     public bool isSailing;
+    public bool isFueling;
 
     public float sailingTimer;
     public float refuelingTimer;
