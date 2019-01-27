@@ -11,6 +11,7 @@ public class PrimeManager : MonoBehaviour
     public Slider homeSlider;
     public GameObject popupHappiness;
     public GameObject popupFuel;
+    public GameObject popupToFuel;
 
     [Header("Values")]
     public float happinessScore;
@@ -24,6 +25,7 @@ public class PrimeManager : MonoBehaviour
     public float refuelingTimer;
     private float time;
     private float animationLength;
+    private Text popupToFuelText;
     
 
     // Start is called before the first frame update
@@ -42,6 +44,7 @@ public class PrimeManager : MonoBehaviour
         refuelingTimer = 2f;
 
         animationLength = 2f;
+        popupToFuelText = popupToFuel.GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
@@ -49,6 +52,7 @@ public class PrimeManager : MonoBehaviour
     {
         if(isSailing)
         {
+            popupToFuelText.text = "Press E to Fuel";
             time += Time.deltaTime;
 
             if(time >= sailingTimer && happinessScore < 70f)
@@ -62,6 +66,7 @@ public class PrimeManager : MonoBehaviour
         else if(!isSailing)
         {
             time += Time.deltaTime;
+            popupToFuelText.text = "Press E to Leave";
 
             if(time >= refuelingTimer)
             {
