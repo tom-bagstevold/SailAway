@@ -26,6 +26,8 @@ public class PrimeManager : MonoBehaviour
     public float sailingTimer;
     public float refuelingTimer;
     public float homeTimer;
+    public float homeLeaveTime;
+    public float leaveCounter;
     private float time;
     private float animationLength;
     private Text popupToFuelText;
@@ -46,6 +48,8 @@ public class PrimeManager : MonoBehaviour
         sailingTimer = 5f;
         refuelingTimer = 2f;
         homeTimer = 4f;
+        homeLeaveTime =3f;
+        
 
         animationLength = 2f;
         popupToFuelText = popupToFuel.GetComponentInChildren<Text>();
@@ -58,6 +62,7 @@ public class PrimeManager : MonoBehaviour
     {
         if(isSailing)
         {
+            leaveCounter = 0f;
             popupToFuelText.text = "Press E to Fuel";
             popupToHomeText.text = "Press E To Find Home";
             time += Time.deltaTime;
@@ -95,7 +100,19 @@ public class PrimeManager : MonoBehaviour
             time += Time.deltaTime;
             popupToHomeText.text = "Press E to Leave";
 
-            if(time >= homeTimer)
+            if (leaveCounter < homeLeaveTime)
+            {
+                popupToHome.SetActive(false);
+                
+            }
+            else if (leaveCounter >= homeLeaveTime)
+            {
+                popupToHome.SetActive(true);
+                //leaveCounter = 0;
+
+            }
+
+            if (time >= homeTimer)
             {
                 if (happinessScore > 0)
                 {
@@ -103,6 +120,7 @@ public class PrimeManager : MonoBehaviour
                 }
 
                 time = 0f;
+                leaveCounter += 1;
             }
         }
         

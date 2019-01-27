@@ -39,6 +39,10 @@ public class HomeLooking : MonoBehaviour
                 manager.isSailing = true;
                 isDocked = false;
                 manager.isHoming = false;
+                manager.popupToHome.SetActive(false);
+                canDock = false;
+                GetComponentInChildren<SpriteRenderer>().enabled = false;
+                gameObject.SetActive(false);
             }
         }
 
