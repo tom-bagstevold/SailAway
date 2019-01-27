@@ -11,21 +11,26 @@ public class PrimeManager : MonoBehaviour
     public Slider homeSlider;
     public GameObject popupHappiness;
     public GameObject popupFuel;
+    public GameObject popupHome;
     public GameObject popupToFuel;
     public GameObject popupToHome;
+    public GameObject FinalArea;
 
     [Header("Values")]
     public float happinessScore;
     public float fuelScore;
     public float homeScore;
+    public float homesVisited;
 
     public bool isSailing;
     public bool isFueling;
     public bool isHoming;
+    public bool inFinalArea;
 
     public float sailingTimer;
     public float refuelingTimer;
     public float homeTimer;
+    public float finalAreaTimer;
     public float homeLeaveTime;
     public float leaveCounter;
     private float time;
@@ -47,8 +52,9 @@ public class PrimeManager : MonoBehaviour
         isSailing = true;
         sailingTimer = 5f;
         refuelingTimer = 2f;
-        homeTimer = 4f;
+        homeTimer = 3f;
         homeLeaveTime =3f;
+        finalAreaTimer = 5f;
         
 
         animationLength = 2f;
@@ -60,6 +66,12 @@ public class PrimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+
         if(isSailing)
         {
             leaveCounter = 0f;
@@ -123,6 +135,28 @@ public class PrimeManager : MonoBehaviour
                 leaveCounter += 1;
             }
         }
+
+        //Final Endgame Code
+
+        if(homesVisited == 3)
+        {
+            Debug.Log("Visited All Homes!");
+            FinalArea.SetActive(true);
+        }
+
+        if(inFinalArea)
+        {
+            time += Time.deltaTime;
+
+            if(time >= finalAreaTimer)
+            {
+                AdjustHappiness(10);
+                AdjustHome(10);
+                time = 0f;
+            }
+
+        }
+        
         
     }
 
@@ -148,6 +182,9 @@ public class PrimeManager : MonoBehaviour
     {
         homeScore += homeAdjustment;
         homeSlider.value = homeScore;
+        popupHome.SetActive(true);
+        popupHome.GetComponentInChildren<Text>().text = homeAdjustment + " Home";
+        Invoke("DeactivatePopupHome", animationLength);
     }
 
     void DeactivatePopupHappiness()
@@ -159,5 +196,11 @@ public class PrimeManager : MonoBehaviour
     {
         
         popupFuel.SetActive(false);
+    }
+
+    void DeactivatePopupHome()
+    {
+
+        popupHome.SetActive(false);
     }
 }

@@ -40,6 +40,7 @@ public class HomeLooking : MonoBehaviour
                 isDocked = false;
                 manager.isHoming = false;
                 manager.popupToHome.SetActive(false);
+                manager.homesVisited += 1;
                 canDock = false;
                 GetComponentInChildren<SpriteRenderer>().enabled = false;
                 gameObject.SetActive(false);
