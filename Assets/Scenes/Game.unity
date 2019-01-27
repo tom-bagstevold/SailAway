@@ -919,6 +919,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1221368540}
     m_Modifications:
+    - target: {fileID: 7586513942046331932, guid: d56eae526d806e947919aa9a10d9e450,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.13313057
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586513942046331932, guid: d56eae526d806e947919aa9a10d9e450,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9910985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586513942046331932, guid: d56eae526d806e947919aa9a10d9e450,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 344.699
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586513942046331932, guid: d56eae526d806e947919aa9a10d9e450,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7957600525838527799, guid: d56eae526d806e947919aa9a10d9e450,
         type: 3}
       propertyPath: m_Name
@@ -2894,7 +2914,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3111,6 +3131,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 322311199}
     m_Modifications:
+    - target: {fileID: 785253201508776910, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.8428593
+      objectReference: {fileID: 0}
+    - target: {fileID: 785253201508776910, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5381339
+      objectReference: {fileID: 0}
+    - target: {fileID: 785253201508776910, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 245.11299
+      objectReference: {fileID: 0}
     - target: {fileID: 4080235734992969278, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_Name
@@ -3284,6 +3319,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 357136177}
     m_Modifications:
+    - target: {fileID: 785253201508776910, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.99998397
+      objectReference: {fileID: 0}
+    - target: {fileID: 785253201508776910, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.005660194
+      objectReference: {fileID: 0}
+    - target: {fileID: 785253201508776910, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180.64899
+      objectReference: {fileID: 0}
     - target: {fileID: 4080235734992969278, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_Name
@@ -3874,6 +3924,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2035804880}
     m_Modifications:
+    - target: {fileID: 7586513942046331932, guid: d56eae526d806e947919aa9a10d9e450,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9992656
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586513942046331932, guid: d56eae526d806e947919aa9a10d9e450,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.038317878
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586513942046331932, guid: d56eae526d806e947919aa9a10d9e450,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 175.608
+      objectReference: {fileID: 0}
     - target: {fileID: 7957600525838527799, guid: d56eae526d806e947919aa9a10d9e450,
         type: 3}
       propertyPath: m_Name
@@ -7798,7 +7863,7 @@ Camera:
   m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 257
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8600000, guid: ab043123881ce884999e41c4e913d327, type: 2}
   m_TargetDisplay: 0
@@ -8164,6 +8229,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 255588409}
     m_Modifications:
+    - target: {fileID: 785253201508776910, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0005771513
+      objectReference: {fileID: 0}
+    - target: {fileID: 785253201508776910, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 785253201508776910, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.066
+      objectReference: {fileID: 0}
     - target: {fileID: 4080235734992969278, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_Name
