@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2511234972307415052}
   - component: {fileID: 2803312218931976680}
-  - component: {fileID: 2617186159365809140}
+  - component: {fileID: 1903165100546023874}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -141,7 +141,7 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
---- !u!114 &2617186159365809140
+--- !u!114 &1903165100546023874
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1903165100546023873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cee17ddf97cb3b41a7e895cd41ad257, type: 3}
+  m_Script: {fileID: 11500000, guid: 0aa68a9b4d5051d4d896ae46f4a51b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
@@ -183,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7914907757570255383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.74, y: 8.37, z: 0}
+  m_LocalPosition: {x: -0.25, y: 5.15, z: 0}
   m_LocalScale: {x: 1.6233411, y: 1.6233411, z: 1.6233411}
   m_Children: []
   m_Father: {fileID: 3099381340368576201}
@@ -213,7 +213,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7957600525838527799}
-  m_LocalRotation: {x: -0, y: -0, z: -0.5236642, w: 0.8519248}
+  m_LocalRotation: {x: 0, y: 0, z: -0.5236663, w: 0.85192347}
   m_LocalPosition: {x: 0.9, y: -104.3, z: 0}
   m_LocalScale: {x: 1.8480406, y: 1.8480406, z: 1.8480406}
   m_Children:
@@ -260,7 +260,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3997c954c6243e942ae3aaec0eebe086, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c0ef42c9222451488597a0d6671ad30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
