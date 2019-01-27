@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PrimeManager : MonoBehaviour
 {
     [Header("References")]
+    public GameObject player;
+    public Transform endTarget;
     public Slider happinessSlider;
     public Slider fuelSlider;
     public Slider homeSlider;
@@ -15,6 +17,8 @@ public class PrimeManager : MonoBehaviour
     public GameObject popupToFuel;
     public GameObject popupToHome;
     public GameObject FinalArea;
+    public GameObject colliderTop;
+    public GameObject colliderRight;
 
     [Header("Values")]
     public float happinessScore;
@@ -32,7 +36,7 @@ public class PrimeManager : MonoBehaviour
     public float homeTimer;
     public float finalAreaTimer;
     public float homeLeaveTime;
-    public float leaveCounter;
+    private float leaveCounter;
     private float time;
     private float animationLength;
     private Text popupToFuelText;
@@ -146,6 +150,10 @@ public class PrimeManager : MonoBehaviour
 
         if(inFinalArea)
         {
+            SetFuel(500f);
+            colliderRight.SetActive(false);
+            colliderTop.SetActive(false);
+
             time += Time.deltaTime;
 
             if(time >= finalAreaTimer)
@@ -153,6 +161,13 @@ public class PrimeManager : MonoBehaviour
                 AdjustHappiness(10);
                 AdjustHome(10);
                 time = 0f;
+            }
+
+            if(homeScore >= 60)
+            {
+                isSailing = false;
+                float step = 20f * Time.deltaTime;
+                //player.transform.position = Vector3.MoveTowards(transform.position, endTarget.position, step);
             }
 
         }
@@ -167,6 +182,12 @@ public class PrimeManager : MonoBehaviour
         popupFuel.SetActive(true);
         popupFuel.GetComponentInChildren<Text>().text = Mathf.RoundToInt(fuelAdjustment) + " Fuel";
         Invoke("DeactivatePopupFuel", animationLength);
+    }
+
+    void SetFuel(float fuelAdjustment)
+    {
+        fuelScore = fuelAdjustment;
+        fuelSlider.value = fuelScore;
     }
 
     public void AdjustHappiness(float happinessAdjustment)
