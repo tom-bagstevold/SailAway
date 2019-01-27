@@ -12,6 +12,7 @@ public class PrimeManager : MonoBehaviour
     public GameObject popupHappiness;
     public GameObject popupFuel;
     public GameObject popupToFuel;
+    public GameObject popupToHome;
 
     [Header("Values")]
     public float happinessScore;
@@ -20,13 +21,15 @@ public class PrimeManager : MonoBehaviour
 
     public bool isSailing;
     public bool isFueling;
+    public bool isHoming;
 
     public float sailingTimer;
     public float refuelingTimer;
+    public float homeTimer;
     private float time;
     private float animationLength;
     private Text popupToFuelText;
-    
+    private Text popupToHomeText;
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +45,12 @@ public class PrimeManager : MonoBehaviour
         isSailing = true;
         sailingTimer = 5f;
         refuelingTimer = 2f;
+        homeTimer = 4f;
 
         animationLength = 2f;
         popupToFuelText = popupToFuel.GetComponentInChildren<Text>();
+        popupToHomeText = popupToHome.GetComponentInChildren<Text>();
+
     }
 
     // Update is called once per frame
@@ -53,6 +59,7 @@ public class PrimeManager : MonoBehaviour
         if(isSailing)
         {
             popupToFuelText.text = "Press E to Fuel";
+            popupToHomeText.text = "Press E To Find Home";
             time += Time.deltaTime;
 
             if(time >= sailingTimer && happinessScore < 70f)
@@ -63,7 +70,7 @@ public class PrimeManager : MonoBehaviour
             }
         }
 
-        else if(!isSailing)
+        else if(!isSailing && isFueling)
         {
             time += Time.deltaTime;
             popupToFuelText.text = "Press E to Leave";
@@ -79,6 +86,22 @@ public class PrimeManager : MonoBehaviour
                     AdjustFuel(20f);
                 }
                 
+                time = 0f;
+            }
+        }
+
+        else if(!isSailing && isHoming)
+        {
+            time += Time.deltaTime;
+            popupToHomeText.text = "Press E to Leave";
+
+            if(time >= homeTimer)
+            {
+                if (happinessScore > 0)
+                {
+                    AdjustHappiness(-2f);
+                }
+
                 time = 0f;
             }
         }
