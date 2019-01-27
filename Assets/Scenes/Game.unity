@@ -4914,72 +4914,82 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1001 &57042338628895187
+--- !u!1001 &4080235734290546926
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 57042338391793411, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969278, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_Name
       value: FuelStation
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -85.9
+      value: -82.18
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -112.94
+      value: -115.6
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 57042338391793409, guid: 9356b080f0c3f63438ddc949c6e3d286,
+    - target: {fileID: 4080235734992969276, guid: 675d4e277b037b641953c411f8387e3b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4080235734667971253, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080235734667971253, guid: 675d4e277b037b641953c411f8387e3b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.74
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9356b080f0c3f63438ddc949c6e3d286, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 675d4e277b037b641953c411f8387e3b, type: 3}
