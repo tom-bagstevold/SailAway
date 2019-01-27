@@ -88,7 +88,7 @@ public class PrimeManager : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
             }
         }
 
@@ -189,7 +189,7 @@ public class PrimeManager : MonoBehaviour
                 endScreen.SetActive(true);
                 if(Input.GetKeyDown(KeyCode.Space))
                 {
-                    SceneManager.LoadScene(0);
+                    SceneManager.LoadScene(1);
                 }
             }
 
