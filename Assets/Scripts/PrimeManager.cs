@@ -153,6 +153,7 @@ public class PrimeManager : MonoBehaviour
             SetFuel(500f);
             colliderRight.SetActive(false);
             colliderTop.SetActive(false);
+            player.GetComponent<Rigidbody2D>().AddForce((transform.up * 20f));
 
             time += Time.deltaTime;
 
@@ -166,8 +167,8 @@ public class PrimeManager : MonoBehaviour
             if(homeScore >= 60)
             {
                 isSailing = false;
-                float step = 20f * Time.deltaTime;
-                //player.transform.position = Vector3.MoveTowards(transform.position, endTarget.position, step);
+                
+                
             }
 
         }
